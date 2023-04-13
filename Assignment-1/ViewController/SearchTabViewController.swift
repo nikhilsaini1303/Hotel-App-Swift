@@ -85,7 +85,7 @@ class SearchTabViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             let defaults = UserDefaults.standard
-            defaults.set(false, forKey: "isUserSignedIn")
+            defaults.set(nil, forKey: "email")
             self.dismiss(animated: true, completion: nil)
         } catch let err {
             self.present(Utilities.createAlertController(title: "Error", message: err.localizedDescription), animated: true, completion: nil)
