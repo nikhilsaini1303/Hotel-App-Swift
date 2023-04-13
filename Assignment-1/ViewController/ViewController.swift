@@ -23,9 +23,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let defaults = UserDefaults.standard
+        let defaults = UserDefaults.standard.value(forKey: "email")
         
-        if defaults.bool(forKey: "isUserSignedIn") {
+        if defaults != nil {
             let viewController = self.storyboard?.instantiateViewController(identifier: "navTabID") as! UINavigationController
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .overFullScreen
