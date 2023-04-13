@@ -151,6 +151,7 @@ class SignUpViewController: UIViewController {
                         }
                         
                     }
+                    UserDefaults.standard.set(email, forKey: "email")
                     self.performSegue(withIdentifier: "userSignUpSegue", sender: nil)
                 }
                 
