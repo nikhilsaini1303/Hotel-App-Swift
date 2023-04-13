@@ -112,7 +112,7 @@ class LoginViewController: UIViewController {
                     return
                     
                 }
-                
+                UserDefaults.standard.set(email, forKey: "email")
                 self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
             }
         }
